@@ -1,4 +1,4 @@
-//this is program to sort the array using insertion sort
+//this is a bubble sort program
 #include<stdio.h>
 int main()
 {
@@ -10,16 +10,17 @@ for(i=0;i<n;i++)
 {
 scanf("%d",&a[i]);
 }
-for(i=1;i<n;i++)
+for(i=0;i<n;i++)
 {
-temp=a[i];
-j=i-1;
-while((temp<a[j])&&(j>=0))
+for(j=0;j<n-i-1;j++)
 {
-a[j+1]=a[j];
-j=j-1;
-}
+if(a[j]>a[j+1])
+{
+temp=a[j];
+a[j]=a[j+1];
 a[j+1]=temp;
+}
+}
 }
 printf("sorted array is");
 for(i=0;i<n;i++)
